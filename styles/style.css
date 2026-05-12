@@ -1,0 +1,249 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  block-size: 100%;
+}
+
+.page {
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  background-color: #1b1919;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+.custom-scrollbar{
+ scrollbar-width: thin; 
+ scrollbar-color: #d9d9d9 rgb(217 217 217 / 0.1);
+}
+/* Кастомный скроллбар */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgb(217 217 217 / 10%);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9;
+}
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  white-space: nowrap;
+}
+.result{
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+ .result__video-container{
+position: relative;
+width: 100%;
+aspect-ratio: 16/9;
+background-color: #000;
+ }
+  .result__video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.search-form{
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+gap: 20px;
+}
+.search-form__fieldset{
+border: none;
+display: flex;
+flex-direction: column;
+gap: 5px;
+} 
+.search-form__fieldset-title{
+font-weight: 400;
+font-size: 18px;
+color: #fff;
+}
+ .search-form__label{
+display: flex;
+align-items: center;
+gap: 5px;
+cursor: pointer;
+ } 
+ .search-form__textfield{
+background: transparent;
+border: 1px solid #fff;
+color: #fff;
+padding: 5px 10px;
+font-family: inherit;
+font-size: 18px;
+min-width: 200px;
+ } 
+ .search-form__checkbox-list{
+display: flex;
+gap: 15px;
+ } 
+ .search-form__checkbox:checked + .search-form__pseudo-checkbox{
+  background-color: #fff;
+  border-color: #fff;
+ }
+ .search-form__pseudo-checkbox{
+display: inline-block;
+width: 16px;
+height: 16px;
+border: 1px solid #fff;
+background: transparent;
+ } 
+ .search-form__submit-button{
+background: transparent;
+border: 1px solid #fff;
+color: #fff;
+padding: 10px 30px;
+font-family: inherit;
+font-size: 18px;
+cursor: pointer;
+transition: 0.3s;
+}
+.search-form__submit-button:hover{
+  background-color: #fff;
+  color: #1b1919;
+}
+.search-form__label:hover .search-form__pseudo-checkbox{
+  border-color: #ff0000;
+}
+.search-form__submit-button:focus-visible{
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+.search-form__textfield:focus{
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+.search-form__textfield::placeholder{
+  color: rgba(255, 255, 255, 0.5);
+}
+.search-form__submit-button:disabled, .search-form__textfield:disabled{
+opacity: 0.5;
+cursor: not-allowed;
+}
+.search-form__submit-button:disabled:hover{
+  background-color: transparent;
+  color:#fff;
+}
+.content__details{
+display: flex;
+flex-direction: column;
+gap: 20px;
+padding: 20px 0;
+} 
+.title{
+font-size: 60px;
+font-weight: 700;
+line-height: 1;
+} 
+.content__accent{
+color: #ff0000;
+}
+.content__list-container{
+max-height: 300px;
+overflow-y: auto;
+} 
+.content__list{
+display: flex;
+flex-direction: column;
+gap: 10px;
+} 
+.content__card-link{
+text-decoration: none;
+color: inherit;
+display: block;
+transition: 0.3s;
+} 
+.content__card-link:hover{
+  opacity: 0.8;
+  text-decoration: underline;
+}
+.content__card-link_current{
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 3px solid #fff;
+  padding-left: 10px;
+}
+.content__card-link:focus-visible{
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+.content__video-card{
+display: flex;
+gap: 10px;
+} 
+.content__video-card-title{
+font-size: 20px;
+font-weight: 700;
+margin-bottom: 5px;
+} 
+.content__video-card-description{
+font-size: 14px;
+opacity: 0.8;
+} 
+.content__video-card-thumbnail{
+width: 100px;
+height: 70px;
+object-fit: cover;
+}
+.more-button{
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 30px;
+  font-family: inherit;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: fit-content;
+  margin-top: 10px;
+}
+.more-button:hover{
+  background-color: #fff;
+  color: #1b1919;
+}
+.more-button:focus-visible{
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+.more-button:disabled{
+opacity: 0.5;
+cursor: not-allowed;
+}
